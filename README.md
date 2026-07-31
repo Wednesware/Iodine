@@ -14,7 +14,6 @@ Requires [Magnesium](https://wednesware.org/magnesium) 26.11+
 - **`SyntaxInput`** - `MultilineInput` with live regex-based syntax highlighting (ships with `PYTHON` and `JSON` rule sets, or bring your own `Highlighter`)
 - **`SelectMenu`** - customizable selection screens: single or multi-select (checkboxes), live search/filter, scrolling for long lists, fully custom item rendering
 - **`Keymap`** - keybind trigger system for both widget-local bindings and global hotkeys (e.g. F1 for help, Ctrl+S to save) checked across the whole run loop, plus multi-key chord sequences
-- **`Theme`/`Style`** - 16/256-color, truecolor, and (via `ww.mg26_11.color`) 140+ named CSS colors, fully customizable per-widget
 
 ## Design
 
