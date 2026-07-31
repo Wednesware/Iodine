@@ -29,7 +29,8 @@ Requires [Magnesium](https://github.com/Wednesware/Magnesium) 26.11+
 ## Quick start
 
 ```python
-from ww.i import TextInput, run
+from ww.i import run
+from ww.i.widgets.text_input import TextInput
 
 name = run(TextInput(prompt="Name: ", placeholder="e.g. Ada"))
 print(name)
@@ -38,7 +39,8 @@ print(name)
 ## Selection screen
 
 ```python
-from ww.i import SelectMenu, run
+from ww.i import run
+from ww.i.widgets.select import SelectMenu
 
 choice = run(SelectMenu(["apple", "banana", "cherry"], title="Pick a fruit:"))
 ```
@@ -52,7 +54,8 @@ picks = run(SelectMenu(["apple", "banana", "cherry"], multi=True))
 ## Suggestions
 
 ```python
-from ww.i import SuggestInput, run
+from ww.i import run
+from ww.i.widgets.suggest_input import SuggestInput
 
 lang = run(SuggestInput(suggestions=["python", "rust", "go"], fuzzy=True))
 ```
@@ -60,7 +63,9 @@ lang = run(SuggestInput(suggestions=["python", "rust", "go"], fuzzy=True))
 ## Syntax highlighting
 
 ```python
-from ww.i import SyntaxInput, PYTHON, run
+from ww.i import run
+from ww.i.widgets.syntax_input import SyntaxInput
+from ww.i.highlight import PYTHON
 
 code = run(SyntaxInput(PYTHON, line_numbers=True))
 ```
@@ -68,7 +73,9 @@ code = run(SyntaxInput(PYTHON, line_numbers=True))
 ## Global keybind triggers
 
 ```python
-from ww.i import Keymap, TextInput, run
+from ww.i import run
+from ww.i.widgets.text_input import TextInput
+from ww.i.keymap import Keymap
 
 hotkeys = Keymap()
 
