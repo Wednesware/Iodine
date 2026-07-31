@@ -2,7 +2,7 @@
 
 Linux/MacOS smart terminal input widgets for Python 3.7+ (Windows support is experimental).
 
-Requires [Magnesium](https://github.com/Wednesware/Magnesium) 26.11+
+Requires [Magnesium](https://wednesware.org/magnesium) 26.11+
 
 ## Features
 
