@@ -78,9 +78,3 @@ def show_help(key):
 
 run(TextInput(prompt="> "), global_keymap=hotkeys)
 ```
-
-## Run the full demo
-
-```bash
-python examples/demo.py
-```
