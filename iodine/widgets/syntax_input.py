@@ -3,8 +3,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from ..highlight import Highlighter
-from ..style import Style
+from .. import Highlighter, Style
 from .multiline_input import MultilineInput
 
 

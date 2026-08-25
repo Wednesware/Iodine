@@ -1,10 +1,9 @@
 """Text input with an autocomplete dropdown."""
 from __future__ import annotations
 
-from typing import Callable, Optional, Union
+from typing import Callable, Union
 
-from ..keys import Key
-from ..style import Theme, DEFAULT_THEME
+from .. import Key, Theme, DEFAULT_THEME
 from .text_input import TextInput
 
 Suggestions = Union[list[str], Callable[[str], list[str]]]

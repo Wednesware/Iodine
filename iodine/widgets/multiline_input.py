@@ -7,8 +7,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from ..keys import Key
-from ..style import Style, Theme, DEFAULT_THEME
+from .. import Key, Style, Theme, DEFAULT_THEME
 from .base import Widget
 
 

@@ -5,8 +5,7 @@ from __future__ import annotations
 
 from typing import Any, Callable, Optional
 
-from ..keys import Key
-from ..style import Theme, DEFAULT_THEME
+from .. import Key, Theme, DEFAULT_THEME
 from .base import Widget
 
 

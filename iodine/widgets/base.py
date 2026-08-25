@@ -1,8 +1,7 @@
 """Base class shared by all interactive widgets."""
 from __future__ import annotations
 
-from ..keys import Key
-from ..terminal import Terminal
+from .. import Key, Terminal
 
 
 class Widget:
