@@ -1,9 +1,11 @@
 from __future__ import annotations
-
 import os, select, re, contextlib, termios, sys, tty, shutil
+from nitrogen import require
+#from ww.mg26_11.logging import error as ww_error
+#from ww.mg26_11.color import Color
 
-from ww.mg26_11.logging import error as ww_error
-from ww.mg26_11.color import Color
+ww_error = require("magnesium.logging").error
+Color = require("magnesium.color").Color
 
 
 ESCAPE_SEQUENCES = {

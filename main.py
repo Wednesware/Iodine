@@ -3,7 +3,7 @@ import subprocess
 from iodine.filib import FileInput
 
 DEFAULT_COMMAND: str = "python -m main >/dev/null"
-DEFAULT_FOOTER: str = "# Enter a command after #> and press enter. Type 'quit' to exit."
+DEFAULT_FOOTER: str = "# Enter a command after > and press enter. Type 'quit' to exit."
 
 async def main():
     footer: str = DEFAULT_FOOTER

@@ -1,8 +1,10 @@
 import asyncio
+from nitrogen import require
+#from ww.mg26_11.filepath import FilePath
+#from ww.mg26_11.logging import log
 
-from ww.mg26_11.filepath import FilePath
-from ww.mg26_11.logging import log
-
+FilePath = require("magnesium.filepath").FilePath
+log = require("magnesium.logging").log
 
 class FileInput:
     def __init__(

@@ -1,88 +1,54 @@
-# Wednesware Iodine
+[![Wednesware](wednesware.png)](https://wednesware.org)
 
-Smart terminal input widgets + FileInput integration.
+# Iodine
 
-Requires [Magnesium](https://wednesware.org/magnesium) 26.11+
+[Project Description]
 
-## Features
+## Installation
 
-- **Raw-mode terminal control** with alt-screen / hidden cursor helpers (`iodine.Terminal`)
-- **Key decoding** for arrows, Home/End/Delete/PageUp/Down, function keys, Ctrl+letter chords, Tab/Shift+Tab (`iodine.read_key`)
-- **`TextInput`** - single-line input with cursor movement, insert/delete, word-delete (Ctrl+W), history (Up/Down), placeholders, password masking, live validation
-- **`MultilineInput`** - a minimal textarea: multi-line editing, optional line numbers, Ctrl+D to submit
-- **`SuggestInput`** - `TextInput` + autocomplete dropdown (prefix or fuzzy matching, Tab/Right to accept, Up/Down to navigate suggestions)
-- **`SyntaxInput`** - `MultilineInput` with live regex-based syntax highlighting (ships with `PYTHON` and `JSON` rule sets, or bring your own `Highlighter`)
-- **`SelectMenu`** - customizable selection screens: single or multi-select (checkboxes), live search/filter, scrolling for long lists, fully custom item rendering
-- **`Keymap`** - keybind trigger system for both widget-local bindings and global hotkeys (e.g. F1 for help, Ctrl+S to save) checked across the whole run loop, plus multi-key chord sequences
-- **`Theme`/`Style`** - 16/256-color and truecolor
-- **`FileInput`** - collect user input live from a file, with a customizable fixed header/footer that cannot be overwritten and custom submit conditions.
-
-## Design
-
-- All rendering uses a "virtual cursor" (a reverse-video character drawn in
-  the string itself) instead of moving the real terminal cursor - this
-  avoids fragile ANSI cursor-position math entirely.
-- Every widget redraw clears and rewrites only its own block of lines
-  (`Terminal.redraw`), so widgets can be composed/run in sequence cleanly.
-- Extend anything: subclass `Widget` and implement `render_lines()` +
-  `handle_key()`.
+> `n2 get iodine`
 
 ## Quick start
 
-```python
-from ww.i import run
-from ww.i.widgets.text_input import TextInput
-
-name = run(TextInput(prompt="Name: ", placeholder="e.g. Ada"))
-print(name)
-```
-
-## Selection screen
+### [Example usage 1]
 
 ```python
-from ww.i import run
-from ww.i.widgets.select import SelectMenu
-
-choice = run(SelectMenu(["apple", "banana", "cherry"], title="Pick a fruit:"))
+[Example usage 1]
 ```
 
-Multi-select with checkboxes:
+### [Example usage 2]
 
 ```python
-picks = run(SelectMenu(["apple", "banana", "cherry"], multi=True))
+[Example usage 2]
 ```
 
-## Suggestions
+### [Example usage 3]
 
 ```python
-from ww.i import run
-from ww.i.widgets.suggest_input import SuggestInput
-
-lang = run(SuggestInput(suggestions=["python", "rust", "go"], fuzzy=True))
+[Example usage 3]
 ```
 
-## Syntax highlighting
+## Dependencies
 
-```python
-from ww.i import run
-from ww.i.widgets.syntax_input import SyntaxInput
-from ww.i.highlight import PYTHON
+- Python 3.12+
+- Nitrogen 26.56+
 
-code = run(SyntaxInput(PYTHON, line_numbers=True))
-```
+# Definitions
 
-## Global keybind triggers
+## `[Library Name]`
 
-```python
-from ww.i import run
-from ww.i.widgets.text_input import TextInput
-from ww.i.keymap import Keymap
+From the base library, you can import [Base Library Objects].
 
-hotkeys = Keymap()
+> `[Import Code]`
 
-@hotkeys.on("F1")
-def show_help(key):
-    print("help!")
+### `[Library Name]:[Class/Function Name]([Parameter 1], [Parameter 2])`
 
-run(TextInput(prompt="> "), global_keymap=hotkeys)
-```
+[Class Description, including explanation of parameters, usage and return value]
+
+> `[Variable Name] = [Class/Function Name]([Parameter 1], [Parameter 2])`
+
+#### `[Library Name]:[Class Name].[Method Name]([Parameter 1], [Parameter 2])`
+
+[Method Description, including explanation of parameters, usage and return value]
+
+> `[Variable Name] = [Class Name].[Method Name]([Parameter 1], [Parameter 2])`
