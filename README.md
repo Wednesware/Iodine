@@ -1,3 +1,5 @@
+[![Wednesware](wednesware.png)](https://wednesware.org)
+
 # Iodine
 
 Iodine is a small Python toolkit for interactive terminal applications. It
