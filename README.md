@@ -18,13 +18,6 @@ Iodine is installed through the Wednesware package tool:
 n2 get iodine
 ```
 
-The library currently requires:
-
-- Python 3.12 or newer
-- Nitrogen 26.56 or newer
-- Magnesium, for colors, file paths, and logging
-- A POSIX terminal for `run()` and the terminal helpers
-
 ## Quick start
 
 ```python
@@ -48,7 +41,7 @@ python examples/demo.py
 ## Dependencies
 
 - Python 3.12+
-- Nitrogen 26.57+ (`pip install wwn`)
+- Nitrogen 26.58+ (`pip install wwn`)
 
 ## Widgets
 
